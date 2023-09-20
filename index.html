@@ -7,10 +7,20 @@
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+  <div class="wrapper">
+
   <header class="header">
     <div class="header__logo">
-      <span>Товары и точка</span>
+      <button class="header__logo__button">
+        <img src="./assets/icons/hamburger.svg" alt="hamburger icon">
+      </button>
+      <div class="header__logo__text">Товары и точка</div>
     </div>
+    <input class="header__search" type="text" placeholder="Я ищу...">
+    <button class="header__button">
+      Профиль
+    </button>
+    <button class="header__button">Корзина</button>
   </header>
 
   <main class="main">
@@ -22,7 +32,8 @@
   <footer class="footer">
     <span>© 2022 ООО «Товары и точка»</span>
   </footer>
-  
+
+  </div>
   <script src="./scripts/script.js"></script>
 </body>
 </html>
