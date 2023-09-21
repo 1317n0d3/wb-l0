@@ -18,14 +18,36 @@
     </div>
     <input class="header__search" type="text" placeholder="Я ищу...">
     <button class="header__button">
-      Профиль
+      <img src="./assets/icons/profile.svg" alt="profile icon">
+      <span class="header__button__text">Профиль</span>
     </button>
-    <button class="header__button">Корзина</button>
+    <button class="header__button">
+      <img src="./assets/icons/cart.svg" alt="cart icon">
+      <span class="header__button__text">Корзина</span>
+    </button>
   </header>
 
   <main class="main">
-    <section>
-      <span>Корзина</span>
+    <section class="main__cart">
+      <span class="main__cart__title">Корзина</span>
+      <div class="main__cart__available-items">
+        <div class="main__cart__available-items__header">
+          <div>
+            <input type="checkbox" id="selectAll" name="selectAll">
+            <label for="selectAll">Выбрать все</label>
+          </div>
+          <button class="main__cart__collapse-button">
+            <img src="./assets/icons/arrow.svg" alt="arrow icon">
+          </button>
+        </div>
+      </div>
+      <div class="main__cart__missing-items"></div>
+      <div class="main__cart__delivery-method"></div>
+      <div class="main__cart__payment-method"></div>
+      <div class="main__cart__recipient"></div>
+    </section>
+    <section class="main__total">
+      <span class="main__total__title">Итого</span>
     </section>
   </main>
 
