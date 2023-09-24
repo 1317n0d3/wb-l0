@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Товары и точка</title>
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/checkbox.css">
 </head>
 <body>
   <div class="wrapper">
@@ -14,36 +15,46 @@
       <button class="header__logo__button">
         <img src="./assets/icons/hamburger.svg" alt="hamburger icon">
       </button>
-      <div class="header__logo__text">Товары и точка</div>
+      <a class="header__logo__text">Товары и точка</a>
     </div>
+
     <input class="header__search" type="text" placeholder="Я ищу...">
+
     <button class="header__button">
       <img src="./assets/icons/profile.svg" alt="profile icon">
       <span class="header__button__text">Профиль</span>
     </button>
+
     <button class="header__button">
       <img src="./assets/icons/cart.svg" alt="cart icon">
       <span class="header__button__text">Корзина</span>
     </button>
   </header>
 
+  
+
   <main class="main">
     <section class="main__cart">
-      <span class="main__cart__title">Корзина</span>
+      <h1 class="main__cart__title">Корзина</h1>
 
       <div class="main__cart__available-items">
         <div class="main__cart__available-items__header">
-          <div>
-            <input type="checkbox" id="selectAll" name="selectAll">
-            <label for="selectAll">Выбрать все</label>
+          <div class="main__cart__available-items__header__select-all">
+            <input type="checkbox" class="custom-checkbox" id="selectAll" name="selectAll">
+            <label for="selectAll"></label>
+            <span>Выбрать все</span>
           </div>
+
           <button class="main__cart__collapse-button">
             <img src="./assets/icons/arrow.svg" alt="arrow icon">
           </button>
         </div>
 
         <div class="main__cart__available-items__item">
-          <input type="checkbox" name="" id="">
+
+          <input type="checkbox" class="custom-checkbox" name="selectItem" id="selectItem">
+          <label for="selectItem"></label>
+
           <img src="./assets/images/UZcotton-tshirt.jpg" alt="item photo">
           <div class="main__cart__available-items__item__info">
             <span>Футболка UZcotton мужская</span>
@@ -71,10 +82,21 @@
       <div class="main__cart__missing-items">
         <span>Отсутствуют · 3 товара</span>
       </div>
-      <div class="main__cart__delivery-method"></div>
-      <div class="main__cart__payment-method"></div>
-      <div class="main__cart__recipient"></div>
+
+      <div class="main__cart__delivery-method">
+        <h2>Способ доставки</h2>
+      </div>
+
+      <div class="main__cart__payment-method">
+        <h2>Способ оплаты</h2>
+      </div>
+
+      <div class="main__cart__recipient">
+        <h2>Получатель</h2>
+      </div>
     </section>
+
+
     <section class="main__total">
       <table class="main__total__table">
         <thead>
@@ -104,6 +126,8 @@
       <span>5-8 фев</span>
     </section>
   </main>
+
+
 
   <footer class="footer">
     <span>© 2022 ООО «Товары и точка»</span>
