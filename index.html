@@ -30,6 +30,7 @@
   <main class="main">
     <section class="main__cart">
       <span class="main__cart__title">Корзина</span>
+
       <div class="main__cart__available-items">
         <div class="main__cart__available-items__header">
           <div>
@@ -40,14 +41,67 @@
             <img src="./assets/icons/arrow.svg" alt="arrow icon">
           </button>
         </div>
+
+        <div class="main__cart__available-items__item">
+          <input type="checkbox" name="" id="">
+          <img src="./assets/images/UZcotton-tshirt.jpg" alt="item photo">
+          <div class="main__cart__available-items__item__info">
+            <span>Футболка UZcotton мужская</span>
+            <div class="main__cart__available-items__item__info__params">
+              <span>Цвет: белый</span>
+              <span>Размер: 56</span>
+            </div>
+            <span>Коледино WB</span>
+            <span>ООО Вайлдберриз</span>
+            <img src="./assets/icons/info.svg" alt="info icon">
+          </div>
+          <div class="main__cart__available-items__item__controls">
+            <input type="number" min="1" value="1" name="" id="">
+            <span>Осталось 2 шт.</span>
+            <img src="./assets/icons/favorite.svg" alt="add to favorite icon">
+            <img src="./assets/icons/trash-can.svg" alt="remove icon">
+          </div>
+          <div class="main__cart__available-items__item__price">
+            <span>522 сом</span>
+            <span>1051 сом</span>
+          </div>
+        </div>
       </div>
-      <div class="main__cart__missing-items"></div>
+      
+      <div class="main__cart__missing-items">
+        <span>Отсутствуют · 3 товара</span>
+      </div>
       <div class="main__cart__delivery-method"></div>
       <div class="main__cart__payment-method"></div>
       <div class="main__cart__recipient"></div>
     </section>
     <section class="main__total">
-      <span class="main__total__title">Итого</span>
+      <table class="main__total__table">
+        <thead>
+          <tr>
+            <th align="left">Итого</th>
+            <th align="right">2 101 063 сом</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>203 товара</td>
+            <td align="right">2 302 048 сом</td>
+          </tr>
+          <tr>
+            <td>Скидка</td>
+            <td align="right">-200 985 сом</td>
+          </tr>
+          <tr>
+            <td>Доставка</td>
+            <td align="right">Бесплатно</td>
+          </tr>
+        </tbody>
+      </table>
+      <span>Доставка в пункт выдачи</span>
+      <img src="./assets/icons/edit.svg" alt="icon edit">
+      <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+      <span>5-8 фев</span>
     </section>
   </main>
 

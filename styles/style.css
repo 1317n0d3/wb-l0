@@ -19,7 +19,7 @@ body {
 }
 
 .header {
-  padding: 20px 20px 20px 24px;
+  padding: 20px 20px 18px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,11 +89,10 @@ body {
   width: 100%;
   background-color: #F6F6FA;
   border-radius: 24px;
-  padding: 22px 24px 50px;
 }
 
 .main__cart {
-
+  margin: 34px 0px 50px 24px;
 }
 
 .main__cart__title {
@@ -114,16 +113,25 @@ body {
   background-color: transparent;
 }
 
+.main__cart__available-items__item {
+  display: flex;
+}
+
 .main__total {
+  margin: 22px 24px 50px 0px;
   padding: 16px 24px 24px;
   border-radius: 16px;
   background-color: #FFF;
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.30), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
-.main__total__title {
+.main__total__table {
+  width: 100%;
+}
+
+.main__total__table th {
   color: #000;
   font-size: 24px;
   font-weight: 700;
-  letter-spacing: -0.24px;
+  letter-spacing: -1px;
 }
