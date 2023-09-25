@@ -51,78 +51,61 @@
           </button>
         </div>
 
-        <!-- TO:DO - Вынести item в json -->
-        <div class="main__cart__available-items__item">
-          <div class="flex">
-            <div class="main__cart__available-items__item__checkbox">
-              <input type="checkbox" class="custom-checkbox" name="select-items" id="item-0">
-              <label for="item-0"></label>
-            </div>
-            
-            <img src="./assets/images/UZcotton-tshirt.jpg" alt="item photo" class="main__cart__available-items__item__photo">
-            <div class="main__cart__available-items__item__info">
-              <span>Футболка UZcotton мужская</span>
-            
-              <div class="main__cart__available-items__item__info__params">
-                <span class="small-text main__cart__available-items__item__info__params__color">Цвет: белый</span>
-                <span class="small-text main__cart__available-items__item__info__params__size">Размер: 56</span>
-              </div>
-            
-              <div>
-                <span class="small-text gray-text">Коледино WB</span>
-                <div class="main__cart__available-items__item__info__provider">
-                  <span class="small-text gray-text">ООО Вайлдберриз</span>
-                  <img class="icon" src="./assets/icons/info.svg" alt="info icon">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex">
-            <div class="main__cart__available-items__item__controls flex-column">
-              <div class="number-input">
-                <button class="minus"></button>
-                <input type="number" min="1" value="1" name="quantity" id="quantity-item-0">
-                <button class="plus"></button>
-              </div>
-              <span class="main__cart__available-items__item__controls__remained small-text red-text">Осталось 2 шт.</span>
-              <div class="main__cart__available-items__item__controls__buttons">
-                <button>
-                  <img class="icon" src="./assets/icons/favorite.svg" alt="add to favorite icon">
-                </button>
-                <button>
-                  <img class="icon" src="./assets/icons/trash-can.svg" alt="remove icon">
-                </button>
-              </div>
-            </div>
-            <div class="main__cart__available-items__item__price flex-column">
-              <div>
-                <span class="main__cart__available-items__item__price__new">522</span>
-                <span class="main__cart__available-items__item__price__currency">сом</span>
-              </div>
-              <span class="main__cart__available-items__item__price__old dashed-gray small-text gray-text">1051 сом</span>
-            </div>
-          </div>
-        </div>
-
-
-
+        <div class="items-container" id="availableItemsContainer"></div>
       </div>
       
       <div class="main__cart__missing-items">
-        <span>Отсутствуют · 3 товара</span>
+        <div class="main__cart__missing-items__header">
+          <span>Отсутствуют · 3 товара</span>
+        
+          <button class="main__cart__collapse-button">
+            <img class="icon" src="./assets/icons/arrow.svg" alt="arrow icon">
+          </button>
+        </div>
       </div>
 
-      <div class="main__cart__delivery-method">
+      <div class="main__cart__delivery-method white-container">
         <h2>Способ доставки</h2>
+        <button>Изменить</button>
+        <span>Пункт выдачи</span>
+        <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+
+        <img src="./assets/icons/star_fill.svg" alt="icon star" class="icon">
+        <span>4.99</span>
+        <span>Ежедневно с 10 до 21</span>
+
+        <span>Стоимость доставки</span>
+        <span>Бесплатно</span>
+
+        <span>5—6 февраля</span>
+        <img src="./assets/images/UZcotton-tshirt.jpg" alt="uzcotton tshirt">
+        <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
+        <img src="./assets/images/Faber-Castell-colored-pencils.jpg" alt="faber castell">
+
+        <span>7—8 февраля</span>
+        <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
+
+        <img src="./assets/icons/price-shipping.svg" alt="free shipping icon" class="icon">
+        <span>Обратная доставка товаров на склад при отказе —</span>
+        <a href="">бесплатно</a>
       </div>
 
-      <div class="main__cart__payment-method">
+      <div class="main__cart__payment-method white-container">
         <h2>Способ оплаты</h2>
+        <button>Изменить</button>
+        <img src="./assets/icons/mir.svg" alt="card icon" class="icon">
+        <span>1234 56•• •••• 1234</span>
+        <span>01/30</span>
+        <span>Спишем оплату с карты при получении</span>
       </div>
 
-      <div class="main__cart__recipient">
+      <div class="main__cart__recipient white-container">
         <h2>Получатель</h2>
+        <input type="text" name="" id="" placeholder="Имя">
+        <input type="text" name="" id="" placeholder="Фамилия">
+        <input type="email" name="" id="" placeholder="Почта">
+        <input type="tel" name="" id="" placeholder="Телефон">
+        <input type="text" name="" id="" placeholder="ИНН">
       </div>
     </section>
 
@@ -151,16 +134,38 @@
         </tbody>
       </table>
       <span>Доставка в пункт выдачи</span>
-      <img class="icon" src="./assets/icons/edit.svg" alt="icon edit">
+      <button>
+        <img class="icon" src="./assets/icons/edit.svg" alt="edit icon">
+      </button>
       <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
       <span>5-8 фев</span>
+
+      <img src="./assets/icons/price-shipping.svg" alt="free shipping icon" class="icon">
+      <span>Обратная доставка товаров на склад при отказе —</span>
+      <span>бесплатно</span>
+
+      <span>Оплата картой</span>
+      <button>
+        <img src="./assets/icons/edit.svg" alt="edit icon">
+      </button>
+      <img src="./assets/icons/mir.svg" alt="payment card icon" class="icon">
+      <span>1234 12•• •••• 1234</span>
+      <input type="checkbox" class="custom-checkbox" name="prepay" id="prepay">
+      <label for="prepay">Списать оплату сразу</label>
+      <span>Спишем оплату с карты при получении</span>
+
+      <button>Заказать</button>
+      <img src="./assets/icons/checked.svg" alt="checked icon" class="icon">
+      <span>Соглашаюсь </span>
+      <a href="">с правилами пользования торговой площадкой</a>
+      <span>и возврата</span>
     </section>
   </main>
 
 
 
   <footer class="footer">
-    <span>© 2022 ООО «Товары и точка»</span>
+    <span class="small-text">© 2022 ООО «Товары и точка»</span>
   </footer>
 
   </div>
