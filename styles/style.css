@@ -183,6 +183,10 @@ h2 {
   width: 100%;
 }
 
+.main__cart__available-items__item__checkbox {
+  align-self: center;
+}
+
 .main__cart__available-items__item__photo {
   width: 72px;
   height: 96px;
@@ -210,6 +214,10 @@ h2 {
 .main__cart__available-items__item__info__provider span {
   padding-bottom: 4px;
   margin-right: 7px;
+}
+
+.main__cart__available-items__item__info__provider img {
+  cursor: pointer;
 }
 
 .main__cart__available-items__item__price {
