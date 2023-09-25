@@ -17,6 +17,11 @@ button {
   cursor: pointer;
 }
 
+.icon {
+  display: flex;
+  object-fit: cover;
+}
+
 .flex {
   display: flex;
 }
@@ -55,6 +60,10 @@ h2 {
 
 .red-text {
   color: #FF3B30;
+}
+
+.dashed-gray {
+  border-bottom: #c5c5c8 1px dashed;
 }
 
 .wrapper {
@@ -133,10 +142,13 @@ h2 {
   width: 100%;
   background-color: #F6F6FA;
   border-radius: 24px;
+  gap: 32px;
 }
 
 .main__cart {
   margin: 34px 0px 50px 24px;
+  /* width: 63.6%; */
+  width: 100%;
 }
 
 .main__cart label {
@@ -151,7 +163,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   border-bottom: rgba(0, 0, 0, 0.10) 1px solid;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 }
 
 .main__cart__available-items__header__select-all {
@@ -202,11 +214,50 @@ h2 {
 
 .main__cart__available-items__item__price {
   width: 110px;
+  align-items: end;
+  margin-left: 16px;
+}
+
+.main__cart__available-items__item__price__new {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main__cart__available-items__item__price__currency {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.main__cart__available-items__item__price__old {
+  margin-top: 3px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.main__cart__available-items__item__price__old::after {
+  border-top: 1px solid #9797AF;
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 60%;
+  left: 0;
+}
+
+.main__cart__available-items__item__controls__remained {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.main__cart__available-items__item__controls__buttons {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
 }
 
 .main__total {
-  margin: 20px 22px 50px 0px;
-  padding: 16px 24px 24px;
+  min-width: 381px;
+  margin: 22px 24px 50px 0px;
+  padding: 14px 24px 24px;
   border-radius: 16px;
   background-color: #FFF;
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.30), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);

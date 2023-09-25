@@ -14,7 +14,7 @@
   <header class="header">
     <div class="header__logo">
       <button class="header__logo__button">
-        <img src="./assets/icons/hamburger.svg" alt="hamburger icon">
+        <img class="icon" src="./assets/icons/hamburger.svg" alt="hamburger icon">
       </button>
       <a class="header__logo__text">Товары и точка</a>
     </div>
@@ -22,12 +22,12 @@
     <input class="header__search" type="text" placeholder="Я ищу...">
 
     <button class="header__button">
-      <img src="./assets/icons/profile.svg" alt="profile icon">
+      <img class="icon" src="./assets/icons/profile.svg" alt="profile icon">
       <span class="header__button__text">Профиль</span>
     </button>
 
     <button class="header__button">
-      <img src="./assets/icons/cart.svg" alt="cart icon">
+      <img class="icon" src="./assets/icons/cart.svg" alt="cart icon">
       <span class="header__button__text">Корзина</span>
     </button>
   </header>
@@ -47,7 +47,7 @@
           </div>
 
           <button class="main__cart__collapse-button">
-            <img src="./assets/icons/arrow.svg" alt="arrow icon">
+            <img class="icon" src="./assets/icons/arrow.svg" alt="arrow icon">
           </button>
         </div>
 
@@ -70,7 +70,7 @@
                 <span class="small-text gray-text">Коледино WB</span>
                 <div class="main__cart__available-items__item__info__provider">
                   <span class="small-text gray-text">ООО Вайлдберриз</span>
-                  <img src="./assets/icons/info.svg" alt="info icon">
+                  <img class="icon" src="./assets/icons/info.svg" alt="info icon">
                 </div>
               </div>
             </div>
@@ -83,19 +83,22 @@
                 <input type="number" min="1" value="1" name="quantity" id="quantity-item-0">
                 <button class="plus"></button>
               </div>
-              <span class="small-text red-text">Осталось 2 шт.</span>
-              <div>
+              <span class="main__cart__available-items__item__controls__remained small-text red-text">Осталось 2 шт.</span>
+              <div class="main__cart__available-items__item__controls__buttons">
                 <button>
-                  <img src="./assets/icons/favorite.svg" alt="add to favorite icon">
+                  <img class="icon" src="./assets/icons/favorite.svg" alt="add to favorite icon">
                 </button>
                 <button>
-                  <img src="./assets/icons/trash-can.svg" alt="remove icon">
+                  <img class="icon" src="./assets/icons/trash-can.svg" alt="remove icon">
                 </button>
               </div>
             </div>
             <div class="main__cart__available-items__item__price flex-column">
-              <span>522 сом</span>
-              <span>1051 сом</span>
+              <div>
+                <span class="main__cart__available-items__item__price__new">522</span>
+                <span class="main__cart__available-items__item__price__currency">сом</span>
+              </div>
+              <span class="main__cart__available-items__item__price__old dashed-gray small-text gray-text">1051 сом</span>
             </div>
           </div>
         </div>
@@ -146,7 +149,7 @@
         </tbody>
       </table>
       <span>Доставка в пункт выдачи</span>
-      <img src="./assets/icons/edit.svg" alt="icon edit">
+      <img class="icon" src="./assets/icons/edit.svg" alt="icon edit">
       <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
       <span>5-8 фев</span>
     </section>
