@@ -6,6 +6,7 @@
   <title>Товары и точка</title>
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/checkbox.css">
+  <link rel="stylesheet" href="./styles/numberInput.css">
 </head>
 <body>
   <div class="wrapper">
@@ -40,8 +41,8 @@
       <div class="main__cart__available-items">
         <div class="main__cart__available-items__header">
           <div class="main__cart__available-items__header__select-all">
-            <input type="checkbox" class="custom-checkbox" id="selectAll" name="selectAll">
-            <label for="selectAll"></label>
+            <input type="checkbox" class="custom-checkbox" name="select-items" id="select-all">
+            <label for="select-all"></label>
             <span>Выбрать все</span>
           </div>
 
@@ -50,33 +51,57 @@
           </button>
         </div>
 
+        <!-- TO:DO - Вынести item в json -->
         <div class="main__cart__available-items__item">
-
-          <input type="checkbox" class="custom-checkbox" name="selectItem" id="selectItem">
-          <label for="selectItem"></label>
-
-          <img src="./assets/images/UZcotton-tshirt.jpg" alt="item photo">
-          <div class="main__cart__available-items__item__info">
-            <span>Футболка UZcotton мужская</span>
-            <div class="main__cart__available-items__item__info__params">
-              <span>Цвет: белый</span>
-              <span>Размер: 56</span>
+          <div class="flex">
+            <input type="checkbox" class="custom-checkbox" name="select-items" id="item-0">
+            <label for="item-0"></label>
+            
+            <img src="./assets/images/UZcotton-tshirt.jpg" alt="item photo" class="main__cart__available-items__item__photo">
+            <div class="main__cart__available-items__item__info">
+              <span>Футболка UZcotton мужская</span>
+            
+              <div class="main__cart__available-items__item__info__params">
+                <span class="small-text main__cart__available-items__item__info__params__color">Цвет: белый</span>
+                <span class="small-text main__cart__available-items__item__info__params__size">Размер: 56</span>
+              </div>
+            
+              <div>
+                <span class="small-text gray-text">Коледино WB</span>
+                <div class="main__cart__available-items__item__info__provider">
+                  <span class="small-text gray-text">ООО Вайлдберриз</span>
+                  <img src="./assets/icons/info.svg" alt="info icon">
+                </div>
+              </div>
             </div>
-            <span>Коледино WB</span>
-            <span>ООО Вайлдберриз</span>
-            <img src="./assets/icons/info.svg" alt="info icon">
           </div>
-          <div class="main__cart__available-items__item__controls">
-            <input type="number" min="1" value="1" name="" id="">
-            <span>Осталось 2 шт.</span>
-            <img src="./assets/icons/favorite.svg" alt="add to favorite icon">
-            <img src="./assets/icons/trash-can.svg" alt="remove icon">
-          </div>
-          <div class="main__cart__available-items__item__price">
-            <span>522 сом</span>
-            <span>1051 сом</span>
+
+          <div class="flex">
+            <div class="main__cart__available-items__item__controls flex-column">
+              <div class="number-input">
+                <button class="minus"></button>
+                <input type="number" min="1" value="1" name="quantity" id="quantity-item-0">
+                <button class="plus"></button>
+              </div>
+              <span class="small-text red-text">Осталось 2 шт.</span>
+              <div>
+                <button>
+                  <img src="./assets/icons/favorite.svg" alt="add to favorite icon">
+                </button>
+                <button>
+                  <img src="./assets/icons/trash-can.svg" alt="remove icon">
+                </button>
+              </div>
+            </div>
+            <div class="main__cart__available-items__item__price flex-column">
+              <span>522 сом</span>
+              <span>1051 сом</span>
+            </div>
           </div>
         </div>
+
+
+
       </div>
       
       <div class="main__cart__missing-items">
