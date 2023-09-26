@@ -22,6 +22,12 @@ button {
   object-fit: cover;
 }
 
+.mir-icon {
+  padding: 7px 1px;
+  border-radius: 4px;
+  background-color: #F6F6FA;
+}
+
 .flex {
   display: flex;
 }
@@ -238,6 +244,11 @@ h2 {
   font-weight: 700;
 }
 
+.main__cart__available-items__item__price__new__small {
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .main__cart__available-items__item__price__currency {
   font-size: 16px;
   font-weight: 700;
@@ -271,7 +282,6 @@ h2 {
 
 .main__cart__missing-items__header {
   margin-top: 40px;
-  margin-bottom: 40px;
 }
 
 .main__cart__missing-items__header span {
@@ -285,7 +295,7 @@ h2 {
 }
 
 .main__cart__delivery-method {
-
+  margin-top: 40px;
 }
 
 .main__cart__payment-method {

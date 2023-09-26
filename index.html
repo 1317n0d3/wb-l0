@@ -62,6 +62,8 @@
             <img class="icon" src="./assets/icons/arrow.svg" alt="arrow icon">
           </button>
         </div>
+
+        <div class="items-container" id="unavailableItemsContainer"></div>
       </div>
 
       <div class="main__cart__delivery-method white-container">
@@ -93,7 +95,7 @@
       <div class="main__cart__payment-method white-container">
         <h2>Способ оплаты</h2>
         <button>Изменить</button>
-        <img src="./assets/icons/mir.svg" alt="card icon" class="icon">
+        <img src="./assets/icons/mir.svg" alt="card icon" class="icon mir-icon">
         <span>1234 56•• •••• 1234</span>
         <span>01/30</span>
         <span>Спишем оплату с карты при получении</span>
@@ -169,6 +171,9 @@
   </footer>
 
   </div>
+  <script src="./scripts/renderItems.js"></script>
+  <script src="./scripts/renderAvailableItems.js"></script>
+  <script src="./scripts/renderUnavailableItems.js"></script>
   <script src="./scripts/script.js"></script>
 </body>
 </html>
