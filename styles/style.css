@@ -342,6 +342,7 @@ h2 {
 .white-container__title-with-button {
   display: flex;
   justify-content: space-between;
+  align-items: end;
 }
 
 .main__cart__delivery-method {
@@ -394,6 +395,18 @@ h2 {
 .main__cart__payment-method {
   margin-top: 16px;
   margin-bottom: 16px;
+}
+
+.main__cart__payment-method__details {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  align-items: end;
+}
+
+.main__cart__payment-method__details__card-number {
+  margin-left: 8px;
+  margin-right: 12px;
 }
 
 .main__cart__recipient {
