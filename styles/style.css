@@ -52,7 +52,7 @@ h2 {
   color: #000;
   font-size: 24px;
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -0.25px;
 }
 
 .small-text {
@@ -66,6 +66,19 @@ h2 {
 
 .red-text {
   color: #FF3B30;
+}
+
+.free-delivery-text {
+  color: #0CB477;
+  border-bottom: rgba(12, 180, 119, 0.20) 1px dashed
+}
+
+.accent-text {
+  color: #CB11AB;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .dashed-gray {
@@ -326,8 +339,56 @@ h2 {
   border-radius: 16px;
 }
 
+.white-container__title-with-button {
+  display: flex;
+  justify-content: space-between;
+}
+
 .main__cart__delivery-method {
   margin-top: 40px;
+}
+
+.main__cart__delivery-method__info {
+  margin-top: 16px;
+}
+
+.main__cart__delivery-method__info__block {
+  display: flex;
+  margin-top: 16px;
+}
+
+.main__cart__delivery-method__info__block__title {
+  font-weight: 600;
+  width: 185px;
+}
+
+.main__cart__delivery-method__info__block__text__about {
+  display: flex;
+  margin-top: 6px;
+}
+
+.main__cart__delivery-method__info__block__text__about__rating {
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.main__cart__delivery-method__info__delivery-date {
+  margin-top: 20px;
+}
+
+.main__cart__delivery-method__info__delivery-date img {
+  margin-right: 8px;
+  height: 56px;
+  width: 40px;
+}
+
+.main__cart__delivery-method__price {
+  display: flex;
+  margin-top: 22px;
+}
+
+.main__cart__delivery-method__price > img {
+  margin-right: 8px;
 }
 
 .main__cart__payment-method {
