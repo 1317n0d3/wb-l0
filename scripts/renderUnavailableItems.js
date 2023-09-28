@@ -37,10 +37,10 @@ const renderUnavailableItems = (unavailableItems) => {
         
         <div class="main__cart__unavailable-items__item__controls__buttons">
           <button>
-            <img class="icon" src="./assets/icons/favorite.svg" alt="add to favorite icon">
+            <img class="icon favorite-icon" src="./assets/icons/favorite.svg" alt="add to favorite icon">
           </button>
           <button>
-            <img class="icon" src="./assets/icons/trash-can.svg" alt="remove icon">
+            <img class="icon trash-can-icon" src="./assets/icons/trash-can.svg" alt="remove icon">
           </button>
         </div>
       </div>`;

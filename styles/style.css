@@ -22,6 +22,14 @@ button {
   object-fit: cover;
 }
 
+.favorite-icon:hover {
+  filter: invert(22%) sepia(94%) saturate(4923%) hue-rotate(298deg) brightness(86%) contrast(102%);
+}
+
+.trash-can-icon:hover {
+  filter: invert(44%) sepia(63%) saturate(4191%) hue-rotate(348deg) brightness(98%) contrast(96%);
+}
+
 .mir-icon {
   padding: 7px 1px;
   border-radius: 4px;
