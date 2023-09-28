@@ -137,17 +137,34 @@ h2 {
 }
 
 .header__search {
-  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 68.5%;
+  padding: 12px 20px 14px;
   border-radius: 36px;
   background-color: #8551b9;
   border: none;
+}
+
+.header__search__input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
   color: #FFF;
 }
 
-.header__search::placeholder {
+.header__search__input::placeholder {
   color: #FFF;
   opacity: 0.5;
   font-size: 18px;
+}
+
+.header__search__input + img {
+  cursor: pointer;
+}
+
+.header__search + .header__button {
+  margin-right: 12px;
 }
 
 .header__button {
@@ -157,11 +174,13 @@ h2 {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-right: 4px;
 }
 
 .header__button__text {
   color: #FFF;
   font-size: 13px;
+  margin-top: 2px;
 }
 
 .main {
