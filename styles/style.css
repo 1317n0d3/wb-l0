@@ -490,8 +490,9 @@ h2 {
 
 .main__total {
   align-self: baseline;
-  min-width: 381px;
-  width: 381px;
+  /* min-width: 381px; */
+  /* width: 381px; */
+  width: 43%;
   margin: 22px 24px 50px 0px;
   padding: 14px 24px 24px;
   border-radius: 16px;
