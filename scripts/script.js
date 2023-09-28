@@ -1,7 +1,9 @@
 let userItems = [];
 
 async function fetchJSON() {
-  const response = await fetch("http://127.0.0.1:5500/assets/index.json");
+  const response = await fetch(
+    "https://raw.githubusercontent.com/1317n0d3/wb-l0/main/assets/index.json"
+  );
   const data = await response.json();
   return data;
 }
