@@ -168,32 +168,53 @@
           </tr>
         </tbody>
       </table>
-      <span>Доставка в пункт выдачи</span>
-      <button>
-        <img class="icon" src="./assets/icons/edit.svg" alt="edit icon">
-      </button>
-      <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-      <span>5-8 фев</span>
+      <div class="main__total__subtitle">
+        <span class="main__total__subtitle__text">Доставка в пункт выдачи</span>
+        <button>
+          <img class="icon" src="./assets/icons/edit.svg" alt="edit icon">
+        </button>
+      </div>
+      <p class="small-text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+      <span class="small-text">5-8 фев</span>
 
-      <img src="./assets/icons/price-shipping.svg" alt="free shipping icon" class="icon">
-      <span>Обратная доставка товаров на склад при отказе —</span>
-      <span>бесплатно</span>
+      <div class="main__total__free-shipping">
+        <img src="./assets/icons/price-shipping.svg" alt="free shipping icon" class="icon">
+        <div>
+          <span class="small-text">Обратная доставка товаров на склад при отказе —</span>
+          <span class="small-text free-delivery-text">бесплатно</span>
+        </div>
+      </div>
 
-      <span>Оплата картой</span>
-      <button>
-        <img src="./assets/icons/edit.svg" alt="edit icon">
-      </button>
-      <img src="./assets/icons/mir.svg" alt="payment card icon" class="icon mir-icon">
-      <span>1234 12•• •••• 1234</span>
-      <input type="checkbox" class="custom-checkbox" name="prepay" id="prepay">
-      <label for="prepay">Списать оплату сразу</label>
-      <span>Спишем оплату с карты при получении</span>
+      <div class="main__total__subtitle">
+        <span class="main__total__subtitle__text">Оплата картой</span>
+        <button>
+          <img src="./assets/icons/edit.svg" alt="edit icon">
+        </button>
+      </div>
+      <div class="main__total__payment-card">
+        <img src="./assets/icons/mir.svg" alt="payment card icon" class="icon mir-icon">
+        <span>1234 12•• •••• 1234</span>
+      </div>
 
-      <button>Заказать</button>
-      <img src="./assets/icons/checked.svg" alt="checked icon" class="icon">
-      <span>Соглашаюсь </span>
-      <a href="">с правилами пользования торговой площадкой</a>
-      <span>и возврата</span>
+      <div class="main__total__payment-immediately">
+        <div class="main__total__payment-immediately__checkbox">
+          <input type="checkbox" class="custom-checkbox" name="prepay" id="prepay">
+          <label for="prepay"></label>
+          <span class="small-text">Списать оплату сразу</span>
+        </div>
+        <span class="small-text">Спишем оплату с карты при получении</span>
+      </div>
+
+      <input type="submit" value="Заказать">
+
+      <div class="main__total__agreement">
+        <img src="./assets/icons/checked.svg" alt="checked icon" class="icon">
+        <div>
+          <span class="small-text">Соглашаюсь </span>
+          <a href="" class="small-text">с правилами пользования торговой площадкой</a>
+          <span class="small-text">и возврата</span>
+        </div>
+      </div>
     </section>
   </main>
 
