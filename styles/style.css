@@ -112,10 +112,6 @@ h2 {
   border-bottom: #c5c5c8 1px dashed;
 }
 
-.wrapper {
-  max-width: 1400px;
-}
-
 .header {
   padding: 20px 20px 18px 24px;
   display: flex;
@@ -162,6 +158,7 @@ h2 {
   border-radius: 36px;
   background-color: #8551b9;
   border: none;
+  margin-left: 20px;
 }
 
 .header__search__input {
@@ -193,6 +190,7 @@ h2 {
   border: none;
   cursor: pointer;
   margin-right: 4px;
+  margin-left: 20px;
 }
 
 .header__button__text {
@@ -227,6 +225,7 @@ h2 {
 .main__cart__available-items__header,
 .main__cart__missing-items__header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: rgba(0, 0, 0, 0.10) 1px solid;
   padding-bottom: 18px;
@@ -645,4 +644,15 @@ input[type="submit"] {
 
 .footer span {
   color: rgba(255, 255, 255, 0.70);
+}
+
+@media (max-width: 1399px) {
+  .main__total {
+    width: 40%;
+  }
+
+  .main__cart__recipient__row-1,
+  .main__cart__recipient__row-2 {
+    margin-right: 0px;
+  }
 }
