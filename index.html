@@ -30,14 +30,16 @@
     </button>
 
     <button class="header__button">
-      <img class="icon" src="./assets/icons/cart.svg" alt="cart icon">
+      <div class="icon-counter">
+        <img class="icon" src="./assets/icons/cart.svg" alt="cart icon">
+      </div>
       <span class="header__button__text">Корзина</span>
     </button>
   </header>
 
   
 
-  <main class="main">
+  <form class="main">
     <section class="main__cart">
       <h1 class="main__cart__title">Корзина</h1>
 
@@ -96,14 +98,22 @@
           <div class="main__cart__delivery-method__info__delivery-date">
             <div class="main__cart__delivery-method__info__block">
               <span class="main__cart__delivery-method__info__block__title">5—6 февраля</span>
-              <img src="./assets/images/UZcotton-tshirt.jpg" alt="uzcotton tshirt">
-              <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
-              <img src="./assets/images/Faber-Castell-colored-pencils.jpg" alt="faber castell">
+              <div class="icon-counter icon-counter__order">
+                <img src="./assets/images/UZcotton-tshirt.jpg" alt="uzcotton tshirt">
+              </div>
+              <div class="icon-counter icon-counter__order">
+                <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
+              </div>
+              <div class="icon-counter icon-counter__order">
+                <img src="./assets/images/Faber-Castell-colored-pencils.jpg" alt="faber castell">
+              </div>
             </div>
             
             <div class="main__cart__delivery-method__info__block">
               <span class="main__cart__delivery-method__info__block__title">7—8 февраля</span>
-              <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
+              <div class="icon-counter icon-counter__order">
+                <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
+              </div>
             </div>
           </div>
         </div>
@@ -219,7 +229,7 @@
         </div>
       </div>
     </section>
-  </main>
+  </form>
 
 
 
