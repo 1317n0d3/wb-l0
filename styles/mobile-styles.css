@@ -1,0 +1,37 @@
+@media (max-width: 1024px) {
+  .header {
+    padding: 14px;
+  }
+
+  .header__logo {
+    width: auto;
+  }
+
+  .header__logo__button {
+    display: none;
+  }
+
+  .mob-header__logo__button {
+    display: block;
+  }
+
+  .header__logo__text {
+    width: auto;
+    font-size: 26px;
+  }
+
+  .header__search {
+    background-color: transparent;
+    padding: 0;
+    width: 28px;
+    margin-left: 0;
+  }
+
+  .header__search input {
+    display: none;
+  }
+
+  .header__button {
+    display: none;
+  }
+}

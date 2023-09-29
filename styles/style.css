@@ -150,6 +150,10 @@ h2 {
   cursor: pointer;
 }
 
+.mob-header__logo__button {
+  display: none;
+}
+
 .header__search {
   display: flex;
   justify-content: space-between;
