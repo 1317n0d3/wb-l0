@@ -139,6 +139,20 @@
     display: none;
   }
 
+  .main__cart__missing-items {
+    margin: 18px 16px;
+  }
+
+  .main__cart__unavailable-items__item {
+    flex-direction: column;
+  }
+
+  .main__cart__unavailable-items__item__controls__buttons {
+    margin-top: 12px;
+    margin-right: 0px;
+    align-self: end;
+  }
+
   .main__total {
     width: 100%;
     box-sizing: border-box;
