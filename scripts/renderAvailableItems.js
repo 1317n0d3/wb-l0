@@ -62,6 +62,20 @@ const renderAvailableItems = (availableItems) => {
         </div>
         
         <div class="main__cart__available-items__item__info">
+          <div class="mob-main__cart__available-items__item__price">
+            <div>
+              <span class="mob-main__cart__available-items__item__price__new">${
+                item.new_price
+              }</span>
+              <span class="mob-main__cart__available-items__item__price__currency">${
+                item.currency
+              }</span>
+            </div>
+            <span class="mob-main__cart__available-items__item__price__old dashed-gray small-text gray-text">${
+              item.old_price
+            } ${item.currency}</span>
+          </div>
+
           <span class="main__cart__available-items__item__info__title">${
             item.title
           }</span>
@@ -92,7 +106,7 @@ const renderAvailableItems = (availableItems) => {
       </div>
 
       <div class="flex">
-        <div class="main__cart__available-items__item__controls flex-column">
+        <div class="main__cart__available-items__item__controls">
 
           <div class="number-input">
             <button class="minus" id="minus-button-${
@@ -125,7 +139,7 @@ const renderAvailableItems = (availableItems) => {
             </button>
           </div>
         </div>
-        <div class="main__cart__available-items__item__price flex-column">
+        <div class="main__cart__available-items__item__price">
           <div>
             <span class="${
               item.new_price.split(" ").length > 2

@@ -320,7 +320,13 @@ h2 {
   cursor: pointer;
 }
 
+.mob-main__cart__available-items__item__price {
+  display: none;
+}
+
 .main__cart__available-items__item__price {
+  display: flex;
+  flex-direction: column;
   width: 110px;
   align-items: end;
   margin-left: 16px;
@@ -354,6 +360,11 @@ h2 {
   right: 0;
   top: 60%;
   left: 0;
+}
+
+.main__cart__available-items__item__controls {
+  display: flex;
+  flex-direction: column;
 }
 
 .main__cart__available-items__item__controls__remained {
