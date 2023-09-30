@@ -20,6 +20,7 @@ button {
 .icon {
   display: flex;
   object-fit: cover;
+  align-items: center;
 }
 
 .icon-counter {
@@ -423,6 +424,10 @@ h2 {
   width: 185px;
 }
 
+.main__cart__delivery-method__info__block__items {
+  display: flex;
+}
+
 .main__cart__delivery-method__info__block__text__about {
   display: flex;
   margin-top: 6px;
@@ -659,6 +664,14 @@ input[type="submit"] {
 
 .footer span {
   color: rgba(255, 255, 255, 0.70);
+}
+
+.mob-navigation-space {
+  display: none;
+}
+
+.mob-navigation {
+  display: none;
 }
 
 @media (max-width: 1399px) {

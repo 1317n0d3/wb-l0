@@ -101,28 +101,32 @@
           <div class="main__cart__delivery-method__info__delivery-date">
             <div class="main__cart__delivery-method__info__block">
               <span class="main__cart__delivery-method__info__block__title">5—6 февраля</span>
-              <div class="icon-counter icon-counter__order">
-                <img src="./assets/images/UZcotton-tshirt.jpg" alt="uzcotton tshirt">
-              </div>
-              <div class="icon-counter icon-counter__order">
-                <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
-              </div>
-              <div class="icon-counter icon-counter__order">
-                <img src="./assets/images/Faber-Castell-colored-pencils.jpg" alt="faber castell">
+              <div class="main__cart__delivery-method__info__block__items">
+                <div class="icon-counter icon-counter__order">
+                  <img src="./assets/images/UZcotton-tshirt.jpg" alt="uzcotton tshirt">
+                </div>
+                <div class="icon-counter icon-counter__order">
+                  <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
+                </div>
+                <div class="icon-counter icon-counter__order">
+                  <img src="./assets/images/Faber-Castell-colored-pencils.jpg" alt="faber castell">
+                </div>
               </div>
             </div>
             
             <div class="main__cart__delivery-method__info__block">
               <span class="main__cart__delivery-method__info__block__title">7—8 февраля</span>
-              <div class="icon-counter icon-counter__order">
-                <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
+              <div class="main__cart__delivery-method__info__block__items">
+                <div class="icon-counter icon-counter__order">
+                  <img src="./assets/images/MobiSafe-case.jpg" alt="mobisafe case">
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="main__cart__delivery-method__price">
-          <img src="./assets/icons/price-shipping.svg" alt="free shipping icon" class="icon">
+          <img src="./assets/icons/price-shipping.svg" alt="free shipping icon">
           <div>
             <span class="small-text">Обратная доставка товаров на склад при отказе —</span>
             <span class="small-text free-delivery-text">бесплатно</span>
@@ -190,8 +194,8 @@
           <img class="icon" src="./assets/icons/edit.svg" alt="edit icon">
         </button>
       </div>
-      <p class="small-text">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-      <span class="small-text">5-8 фев</span>
+      <p class="small-text main__total__point-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+      <span class="small-text main__total__delivery-date">5-8 фев</span>
 
       <div class="main__total__free-shipping">
         <img src="./assets/icons/price-shipping.svg" alt="free shipping icon" class="icon">
@@ -239,6 +243,26 @@
   <footer class="footer">
     <span class="small-text">© 2022 ООО «Товары и точка»</span>
   </footer>
+
+  <div class="mob-navigation-space"></div>
+
+  <nav class="mob-navigation">
+    <button class="icon">
+      <img src="./assets/icons/home.svg" alt="">
+    </button>
+    <button class="icon">
+      <img src="./assets/icons/catalog.svg" alt="">
+    </button>
+    <button class="icon icon-counter">
+      <img src="./assets/icons/nav-cart.svg" alt="">
+    </button>
+    <button class="icon">
+      <img src="./assets/icons/heart.svg" alt="">
+    </button>
+    <button class="icon">
+      <img src="./assets/icons/nav-profile.svg" alt="">
+    </button>
+  </nav>
 
   <script src="./scripts/renderItems.js"></script>
   <script src="./scripts/renderAvailableItems.js"></script>

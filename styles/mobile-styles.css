@@ -41,6 +41,7 @@
 
   .main {
     flex-direction: column;
+    gap: 0px;
   }
 
   .main__cart {
@@ -153,8 +154,53 @@
     align-self: end;
   }
 
+  .main__cart__delivery-method__info__block {
+    flex-direction: column;
+  }
+
+  .main__cart__delivery-method__info__block__items {
+    margin-top: 12px;
+  }
+
+  .main__cart__recipient__row-1,
+  .main__cart__recipient__row-2 {
+    flex-direction: column;
+  }
+
+  .main__cart__recipient {
+    margin-bottom: 0px;
+  }
+
   .main__total {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  .main__total__subtitle,
+  .main__total__point-address,
+  .main__total__delivery-date,
+  .main__total__payment-card {
+    display: none;
+  }
+
+  .mob-navigation-space {
+    display: block;
+    height: 56px;
+  }
+
+  .mob-navigation {
+    position:fixed;
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
+    padding: 13px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #FFF;
   }
 }
