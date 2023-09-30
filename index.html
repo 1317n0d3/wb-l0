@@ -219,13 +219,13 @@
       <div class="main__total__payment-immediately">
         <div class="main__total__payment-immediately__checkbox">
           <input type="checkbox" class="custom-checkbox" name="prepay" id="prepay">
-          <label for="prepay"></label>
+          <label for="prepay" id="prepay-label"></label>
           <span class="small-text">Списать оплату сразу</span>
         </div>
         <span class="small-text">Спишем оплату с карты при получении</span>
       </div>
 
-      <input type="submit" value="Заказать">
+      <input type="submit" id="input-submit-order" value="Заказать">
 
       <div class="main__total__agreement">
         <img src="./assets/icons/checked.svg" alt="checked icon" class="icon">
@@ -264,6 +264,7 @@
     </button>
   </nav>
 
+  <script src="./scripts/inputSubmit.js"></script>
   <script src="./scripts/setTotalPrice.js"></script>
   <script src="./scripts/renderItems.js"></script>
   <script src="./scripts/renderAvailableItems.js"></script>

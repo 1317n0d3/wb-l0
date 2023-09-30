@@ -639,6 +639,12 @@ input[type="submit"] {
   text-align: center;
   font-weight: 700;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type="submit"]:disabled {
+  background-color: #9797AF;
+  cursor: not-allowed;
 }
 
 .main__total__agreement {

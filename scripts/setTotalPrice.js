@@ -29,9 +29,25 @@ const setTotalPrice = (availableItems, currency, item) => {
     totalPriceWithoutDiscount
   )} ${currency}`;
 
-  totalDiscountElem.textContent = `-${convertPriceFormat(
-    totalDiscount
-  )} ${currency}`;
+  totalDiscountElem.textContent = `${
+    totalDiscount === 0 ? "" : "-"
+  }${convertPriceFormat(totalDiscount)} ${currency}`;
+
+  const prepayCheckbox = document.querySelector("#prepay");
+
+  const inputSubmitOrder = document.querySelector("#input-submit-order");
+
+  if (prepayCheckbox.checked) {
+    inputSubmitOrder.value = `${convertPriceFormat(totalPrice)} ${currency}`;
+  } else {
+    inputSubmitOrder.value = "Заказать";
+  }
+
+  if (totalPrice === 0) {
+    inputSubmitOrder.disabled = true;
+  } else {
+    inputSubmitOrder.disabled = false;
+  }
 
   if (item) {
     const itemTotalPriceElem = document.querySelector(`#price-new-${item.id}`);
