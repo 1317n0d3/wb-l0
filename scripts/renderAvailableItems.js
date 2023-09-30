@@ -1,11 +1,21 @@
-const initAvailableItemsListeners = (item) => {
+const initAvailableItemsListeners = (item, availableItems) => {
+  const itemCard = document.querySelector(`#item-card-${item.id}`);
   const input = document.querySelector(`#quantity-item-${item.id}`);
   const minusButton = document.querySelector(`#minus-button-${item.id}`);
   const plusButton = document.querySelector(`#plus-button-${item.id}`);
+  const favoriteButton = document.querySelector(`#favorite-${item.id}`);
+  const trashCanButton = document.querySelector(`#trash-can-${item.id}`);
 
   setButtonDisabled(minusButton, plusButton, input.value, input.min, input.max);
 
-  plusButton.addEventListener("click", () => {
+  setTotalPrice(availableItems, item.currency, item);
+
+  plusButton.addEventListener("click", (event) => {
+    plusButton.parentNode.querySelector(`#quantity-item-${item.id}`).stepUp();
+    item.count++;
+
+    setTotalPrice(availableItems, item.currency, item);
+
     setButtonDisabled(
       minusButton,
       plusButton,
@@ -13,9 +23,17 @@ const initAvailableItemsListeners = (item) => {
       input.min,
       input.max
     );
+    event.preventDefault();
   });
 
-  minusButton.addEventListener("click", () => {
+  minusButton.addEventListener("click", (event) => {
+    minusButton.parentNode
+      .querySelector(`#quantity-item-${item.id}`)
+      .stepDown();
+    item.count--;
+
+    setTotalPrice(availableItems, item.currency, item);
+
     setButtonDisabled(
       minusButton,
       plusButton,
@@ -23,6 +41,19 @@ const initAvailableItemsListeners = (item) => {
       input.min,
       input.max
     );
+    event.preventDefault();
+  });
+
+  favoriteButton.addEventListener("click", (event) => {
+    event.preventDefault();
+  });
+
+  trashCanButton.addEventListener("click", (event) => {
+    itemCard.remove();
+    item.count = 0;
+    setTotalPrice(availableItems, "сом");
+
+    event.preventDefault();
   });
 };
 
@@ -109,19 +140,11 @@ const renderAvailableItems = (availableItems) => {
         <div class="main__cart__available-items__item__controls">
 
           <div class="number-input">
-            <button class="minus" id="minus-button-${
-              item.id
-            }" onclick="this.parentNode.querySelector('#quantity-item-${
-      item.id
-    }').stepDown()"></button>
+            <button class="minus" id="minus-button-${item.id}"></button>
             <input type="number" min="1" max="${item.remained}" value="${
       item.count
     }" name="quantity" id="quantity-item-${item.id}" readonly>
-            <button class="plus" id="plus-button-${
-              item.id
-            }" onclick="this.parentNode.querySelector('#quantity-item-${
-      item.id
-    }').stepUp()"></button>
+            <button class="plus" id="plus-button-${item.id}"></button>
           </div>
 
 
@@ -131,10 +154,10 @@ const renderAvailableItems = (availableItems) => {
               : ``
           }
           <div class="main__cart__available-items__item__controls__buttons">
-            <button>
+            <button id="favorite-${item.id}">
               <img class="icon favorite-icon" src="./assets/icons/favorite.svg" alt="add to favorite icon">
             </button>
-            <button>
+            <button id="trash-can-${item.id}">
               <img class="icon trash-can-icon" src="./assets/icons/trash-can.svg" alt="remove icon">
             </button>
           </div>
@@ -142,21 +165,21 @@ const renderAvailableItems = (availableItems) => {
         <div class="main__cart__available-items__item__price">
           <div>
             <span class="${
-              item.new_price.split(" ").length > 2
+              item.new_price.toString().length > 6
                 ? `main__cart__available-items__item__price__new__small`
                 : `main__cart__available-items__item__price__new`
-            }">${item.new_price}</span>
-            <span class="main__cart__available-items__item__price__currency">${
-              item.currency
-            }</span>
+            }" id="price-new-${item.id}">${item.new_price}</span>
+            <span class="main__cart__available-items__item__price__currency" id="price-currency-${
+              item.id
+            }">${item.currency}</span>
           </div>
-          <span class="main__cart__available-items__item__price__old dashed-gray small-text gray-text">${
-            item.old_price
-          } ${item.currency}</span>
+          <span class="main__cart__available-items__item__price__old dashed-gray small-text gray-text" id="price-old-${
+            item.id
+          }">${item.old_price} ${item.currency}</span>
         </div>
       </div>`;
 
     availableItemsContainer.appendChild(div);
-    initAvailableItemsListeners(item);
+    initAvailableItemsListeners(item, availableItems);
   });
 };

@@ -61,7 +61,12 @@
     position: relative;
   }
 
-  .main__cart__available-items__item .custom-checkbox + label::before {
+  .main__cart__available-items__item__info__title,
+  .main__cart__unavailable-items__item__info__title {
+    font-size: 14px;
+  }
+
+  .custom-checkbox:not(:disabled):not(:checked)+label::before {
     background-color: #FFF;
   }
 

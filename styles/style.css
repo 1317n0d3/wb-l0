@@ -294,6 +294,7 @@ h2 {
 
 .main__cart__available-items__item__info__title,
 .main__cart__unavailable-items__item__info__title {
+  cursor: pointer;
   line-height: 24px;
 }
 

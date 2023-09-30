@@ -170,17 +170,17 @@
         <thead>
           <tr>
             <th align="left">Итого</th>
-            <th align="right">2 101 063 сом</th>
+            <th align="right" id="total-price">2 101 063 сом</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>203 товара</td>
-            <td align="right">2 302 048 сом</td>
+            <td align="right" id="total-price-without-discount">2 302 048 сом</td>
           </tr>
           <tr>
             <td>Скидка</td>
-            <td align="right">-200 985 сом</td>
+            <td align="right" id="total-discount">-200 985 сом</td>
           </tr>
           <tr>
             <td>Доставка</td>
@@ -264,6 +264,7 @@
     </button>
   </nav>
 
+  <script src="./scripts/setTotalPrice.js"></script>
   <script src="./scripts/renderItems.js"></script>
   <script src="./scripts/renderAvailableItems.js"></script>
   <script src="./scripts/renderUnavailableItems.js"></script>
