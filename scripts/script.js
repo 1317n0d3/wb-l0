@@ -16,4 +16,15 @@ fetchJSON().then((data) => {
 const renderCart = (userItems) => {
   renderItems(userItems);
   inputSubmit();
+  // checkFormValidation();
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Backspace" || event.key === "Delete") {
+      return;
+    }
+
+    const phoneInput = document.querySelector("#form-phone");
+
+    formatPhoneInputText(phoneInput);
+  });
 };

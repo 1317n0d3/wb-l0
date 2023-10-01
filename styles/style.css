@@ -505,6 +505,11 @@ h2 {
   align-items: start;
 }
 
+.main__cart__recipient__row-1 > div,
+.main__cart__recipient__row-2 > div {
+  width: 100%;
+}
+
 .main__cart__recipient input {
   width: 100%;
   border: none;
@@ -517,6 +522,20 @@ h2 {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+}
+
+.main__cart__recipient .invalid {
+  color: #C20013;
+  border-bottom: #C20013 1px solid;
+}
+
+.main__cart__recipient .invalid::placeholder {
+  color: #C20013;
+}
+
+.input-error-text {
+  font-size: 12px;
+  color: #C20013;
 }
 
 .main__cart__recipient__row-2__inn {

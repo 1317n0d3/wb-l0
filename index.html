@@ -42,7 +42,7 @@
 
   
 
-  <form class="main">
+  <form class="main" onsubmit="return checkFormValidation()">
     <section class="main__cart">
       <h1 class="main__cart__title">Корзина</h1>
 
@@ -150,14 +150,27 @@
       <div class="main__cart__recipient white-container">
         <h2>Получатель</h2>
         <div class="main__cart__recipient__row-1">
-          <input type="text" name="" id="" placeholder="Имя">
-          <input type="text" name="" id="" placeholder="Фамилия">
+          <div>
+            <input type="text" name="" id="form-name" placeholder="Имя">
+            <span class="input-error-text" id="error-name-text"></span>
+          </div>
+          <div>
+            <input type="text" name="" id="form-surname" placeholder="Фамилия">
+            <span class="input-error-text" id="error-surname-text"></span>
+          </div>
         </div>
         <div class="main__cart__recipient__row-2">
-          <input type="email" name="" id="" placeholder="Почта">
-          <input type="tel" name="" id="" placeholder="Телефон">
+          <div>
+            <input type="text" name="" id="form-email" placeholder="Почта">
+            <span class="input-error-text" id="error-email-text"></span>
+          </div>
+          <div>
+            <input type="text" name="" id="form-phone" placeholder="Телефон">
+            <span class="input-error-text" id="error-phone-text"></span>
+          </div>
           <div class="main__cart__recipient__row-2__inn">
-            <input type="text" name="" id="" placeholder="ИНН">
+            <input type="text" name="" id="form-inn" placeholder="ИНН">
+            <span class="input-error-text" id="error-inn-text"></span>
             <span class="main__cart__recipient__row-2__inn__text">Для таможенного оформления</span>
           </div>
         </div>
@@ -264,6 +277,7 @@
     </button>
   </nav>
 
+  <script src="./scripts/checkFormValidation.js"></script>
   <script src="./scripts/inputSubmit.js"></script>
   <script src="./scripts/setTotalPrice.js"></script>
   <script src="./scripts/renderItems.js"></script>
