@@ -93,7 +93,7 @@ const renderAvailableItems = (availableItems) => {
         </div>
         
         <div class="main__cart__available-items__item__info">
-          <div class="mob-main__cart__available-items__item__price">
+          <div class="mob-main__cart__available-items__item__price block-with-tooltip">
             <div>
               <span class="mob-main__cart__available-items__item__price__new">${
                 item.new_price
@@ -102,9 +102,20 @@ const renderAvailableItems = (availableItems) => {
                 item.currency
               }</span>
             </div>
-            <span class="mob-main__cart__available-items__item__price__old dashed-gray small-text gray-text">${
+            <span class="mob-main__cart__available-items__item__price__old dashed-gray small-text gray-text block-with-tooltip__trigger">${
               item.old_price
             } ${item.currency}</span>
+            
+            <div class="block-with-tooltip__container tooltip-column-container">
+              <div>
+                <span class="block-with-tooltip__container__text tooltip-text-discount">Скидка 55%</span>
+                <span class="block-with-tooltip__container__text tooltip-text-discount-value">-300 сом</span>
+              </div>
+              <div>
+                <span class="block-with-tooltip__container__text tooltip-text-discount">Скидка покупателя 10%</span>
+                <span class="block-with-tooltip__container__text tooltip-text-discount-value">-30 сом</span>
+              </div>
+            </div>
           </div>
 
           <span class="main__cart__available-items__item__info__title">${
@@ -128,9 +139,21 @@ const renderAvailableItems = (availableItems) => {
         
           <div>
             <span class="small-text gray-text">${item.warehouse}</span>
-            <div class="main__cart__available-items__item__info__provider">
+            <div class="main__cart__available-items__item__info__provider block-with-tooltip">
               <span class="small-text gray-text">${item.provider}</span>
-              <img class="icon" src="./assets/icons/info.svg" alt="info icon">
+              <img class="icon block-with-tooltip__trigger" src="./assets/icons/info.svg" alt="info icon">
+              
+              <div class="block-with-tooltip__container tooltip-column-container">
+                <div>
+                  <span class="block-with-tooltip__container__text tooltip-title">OOO «МЕГАПРОФСТИЛЬ»</span>
+                </div>
+                <div>
+                  <span class="block-with-tooltip__container__text">ОГРН: 5167746237148</span>
+                </div>
+                <div>
+                  <span class="block-with-tooltip__container__text">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -162,7 +185,7 @@ const renderAvailableItems = (availableItems) => {
             </button>
           </div>
         </div>
-        <div class="main__cart__available-items__item__price">
+        <div class="main__cart__available-items__item__price block-with-tooltip">
           <div>
             <span class="${
               item.new_price.toString().length > 6
@@ -173,9 +196,19 @@ const renderAvailableItems = (availableItems) => {
               item.id
             }">${item.currency}</span>
           </div>
-          <span class="main__cart__available-items__item__price__old dashed-gray small-text gray-text" id="price-old-${
+          <span class="main__cart__available-items__item__price__old dashed-gray small-text gray-text block-with-tooltip__trigger" id="price-old-${
             item.id
           }">${item.old_price} ${item.currency}</span>
+          <div class="block-with-tooltip__container tooltip-column-container">
+            <div>
+              <span class="block-with-tooltip__container__text tooltip-text-discount">Скидка 55%</span>
+              <span class="block-with-tooltip__container__text tooltip-text-discount-value">-300 сом</span>
+            </div>
+            <div>
+              <span class="block-with-tooltip__container__text tooltip-text-discount">Скидка покупателя 10%</span>
+              <span class="block-with-tooltip__container__text tooltip-text-discount-value">-30 сом</span>
+            </div>
+          </div>
         </div>
       </div>`;
 
