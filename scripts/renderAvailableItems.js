@@ -50,7 +50,7 @@ const initAvailableItemsListeners = (item, availableItems) => {
 
   trashCanButton.addEventListener("click", (event) => {
     itemCard.remove();
-    item.count = 0;
+    item.selected = false;
     setTotalPrice(availableItems, "сом");
 
     event.preventDefault();

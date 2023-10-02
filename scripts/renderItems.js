@@ -4,5 +4,5 @@ const renderItems = (items) => {
 
   renderAvailableItems(availableItems);
   renderUnavailableItems(unavailableItems);
-  initSelectAllMethod();
+  initSelectAllMethod(availableItems);
 };

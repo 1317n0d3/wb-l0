@@ -10,13 +10,16 @@ const setTotalPrice = (availableItems, currency, item) => {
     "#total-price-without-discount"
   );
   const totalDiscountElem = document.querySelector("#total-discount");
+  const selectedItems = availableItems.filter(
+    (availableItem) => availableItem.selected === true
+  );
 
-  const totalPrice = availableItems.reduce(
+  const totalPrice = selectedItems.reduce(
     (prev, current) => prev + current.new_price * current.count,
     0
   );
 
-  const totalPriceWithoutDiscount = availableItems.reduce(
+  const totalPriceWithoutDiscount = selectedItems.reduce(
     (prev, current) => prev + current.old_price * current.count,
     0
   );

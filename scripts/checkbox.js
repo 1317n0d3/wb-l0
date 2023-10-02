@@ -1,3 +1,12 @@
+const setChecked = (availableItems, checkbox, isChecked) => {
+  const id = checkbox.id.split("-")[1];
+  const item = availableItems.find((availableItem) => availableItem.id === id);
+  checkbox.checked = isChecked;
+  item.selected = isChecked;
+
+  setTotalPrice(availableItems, "сом");
+};
+
 const isAllChecked = (checkboxes) => {
   let allChecked = true;
   checkboxes.forEach((checkbox) => {
@@ -7,7 +16,7 @@ const isAllChecked = (checkboxes) => {
   return allChecked;
 };
 
-const initSelectAllMethod = () => {
+const initSelectAllMethod = (availableItems) => {
   const checkboxes = document.getElementsByName("select-items");
   const selectAllCheckbox = document.querySelector("#select-all");
   selectAllCheckbox.checked = true;
@@ -15,11 +24,11 @@ const initSelectAllMethod = () => {
   selectAllCheckbox.addEventListener("click", () => {
     if (selectAllCheckbox.checked) {
       checkboxes.forEach((checkbox) => {
-        checkbox.checked = true;
+        setChecked(availableItems, checkbox, true);
       });
     } else {
       checkboxes.forEach((checkbox) => {
-        checkbox.checked = false;
+        setChecked(availableItems, checkbox, false);
       });
     }
   });
@@ -27,8 +36,11 @@ const initSelectAllMethod = () => {
   checkboxes.forEach((checkbox) => {
     checkbox.checked = true;
     checkbox.addEventListener("click", () => {
-      if (!checkbox.checked) {
+      if (checkbox.checked) {
+        setChecked(availableItems, checkbox, true);
+      } else {
         selectAllCheckbox.checked = false;
+        setChecked(availableItems, checkbox, false);
       }
 
       if (isAllChecked(checkboxes)) {
