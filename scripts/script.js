@@ -17,6 +17,14 @@ const renderCart = (userItems) => {
   renderItems(userItems);
   inputSubmit();
   // checkFormValidation();
+  initPopup();
+
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Backspace" || event.key === "Delete") {

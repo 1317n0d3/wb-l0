@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="./styles/numberInput.css">
   <link rel="stylesheet" href="./styles/mobile-styles.css">
   <link rel="stylesheet" href="./styles/tooltip.css">
+  <link rel="stylesheet" href="./styles/popup.css">
+  <link rel="stylesheet" href="./styles/radioButton.css">
 </head>
 <body>
   <header class="header">
@@ -78,7 +80,7 @@
       <div class="main__cart__delivery-method white-container">
         <div class="white-container__title-with-button">
           <h2>Способ доставки</h2>
-          <button class="accent-text">Изменить</button>
+          <button class="accent-text" id="delivery-method-popup-button-1">Изменить</button>
         </div>
         
         <div class="main__cart__delivery-method__info">
@@ -141,10 +143,10 @@
       <div class="main__cart__payment-method white-container">
         <div class="white-container__title-with-button">
           <h2>Способ оплаты</h2>
-          <button class="accent-text">Изменить</button>
+          <button class="accent-text" id="payment-method-popup-button-1">Изменить</button>
         </div>
         <div class="main__cart__payment-method__details">
-          <img src="./assets/icons/mir.svg" alt="card icon" class="icon mir-icon">
+          <img src="./assets/icons/mir.svg" alt="card icon" class="icon payment-card-icon">
           <span class="main__cart__payment-method__details__card-number">1234 56•• •••• 1234</span>
           <span>01/30</span>
         </div>
@@ -207,7 +209,7 @@
       </table>
       <div class="main__total__subtitle">
         <span class="main__total__subtitle__text">Доставка в пункт выдачи</span>
-        <button>
+        <button id="delivery-method-popup-button-2">
           <img class="icon" src="./assets/icons/edit.svg" alt="edit icon">
         </button>
       </div>
@@ -228,12 +230,12 @@
 
       <div class="main__total__subtitle">
         <span class="main__total__subtitle__text">Оплата картой</span>
-        <button>
+        <button id="payment-method-popup-button-2">
           <img src="./assets/icons/edit.svg" alt="edit icon">
         </button>
       </div>
       <div class="main__total__payment-card">
-        <img src="./assets/icons/mir.svg" alt="payment card icon" class="icon mir-icon">
+        <img src="./assets/icons/mir.svg" alt="payment card icon" class="icon payment-card-icon">
         <span>1234 12•• •••• 1234</span>
       </div>
 
@@ -269,22 +271,103 @@
 
   <nav class="mob-navigation">
     <button class="icon">
-      <img src="./assets/icons/home.svg" alt="">
+      <img src="./assets/icons/home.svg" alt="home icon">
     </button>
     <button class="icon">
-      <img src="./assets/icons/catalog.svg" alt="">
+      <img src="./assets/icons/catalog.svg" alt="catalog icon">
     </button>
     <button class="icon icon-counter">
-      <img src="./assets/icons/nav-cart.svg" alt="">
+      <img src="./assets/icons/nav-cart.svg" alt="cart icon">
     </button>
     <button class="icon">
-      <img src="./assets/icons/heart.svg" alt="">
+      <img src="./assets/icons/heart.svg" alt="heart icon">
     </button>
     <button class="icon">
-      <img src="./assets/icons/nav-profile.svg" alt="">
+      <img src="./assets/icons/nav-profile.svg" alt="profile icon">
     </button>
   </nav>
 
+  <div class="popup" id="delivery-method-popup">
+    <div class="popup__content">
+      <div>
+        <div class="popup__header">
+          <span class="popup__header__title">Способ доставки</span>
+          <button class="popup__header__button" id="delivery-method-popup-close-button">
+            <img src="./assets/icons/search-close.svg" alt="close icon">
+          </button>
+        </div>
+        <div class="popup__delivery-point-buttons">
+          <button class="popup__delivery-point-button__active">В пункт выдачи</button>
+          <button>Курьером</button>
+        </div>
+        <div>
+          <span class="popup__content__subtitle">Мои адреса</span>
+          <div class="popup__content__radio-buttons">
+            <div class="popup__content__radio-button">
+              <label class="radio-container">
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <div class="popup__content__radio-button__block">
+                <div class="main__cart__delivery-method__info__block__text">
+                  <span>г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+                  <div class="main__cart__delivery-method__info__block__text__about">
+                    <img src="./assets/icons/star_fill.svg" alt="icon star">
+                    <span class="small-text main__cart__delivery-method__info__block__text__about__rating"></span>
+                    <span class="small-text gray-text">Пункт выдачи</span>
+                  </div>
+                </div>
+                <button>
+                  <img class="icon trash-can-icon" src="./assets/icons/trash-can.svg" alt="remove icon">
+                </button>
+              </div>
+            </div>
+            <div class="popup__content__radio-button">
+              <label class="radio-container">
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <div class="popup__content__radio-button__block">
+                <div class="main__cart__delivery-method__info__block__text">
+                  <span>г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+                  <div class="main__cart__delivery-method__info__block__text__about">
+                    <img src="./assets/icons/star_fill.svg" alt="icon star">
+                    <span class="small-text main__cart__delivery-method__info__block__text__about__rating">4.99</span>
+                    <span class="small-text gray-text">Пункт выдачи</span>
+                  </div>
+                </div>
+                <button>
+                  <img class="icon trash-can-icon" src="./assets/icons/trash-can.svg" alt="remove icon">
+                </button>
+              </div>
+            </div>
+            <div class="popup__content__radio-button">
+              <label class="radio-container">
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <div class="popup__content__radio-button__block">
+                <div class="main__cart__delivery-method__info__block__text">
+                  <span>г. Бишкек, улица Табышалиева, д. 57</span>
+                  <div class="main__cart__delivery-method__info__block__text__about">
+                    <img src="./assets/icons/star_fill.svg" alt="icon star">
+                    <span class="small-text main__cart__delivery-method__info__block__text__about__rating">4.99</span>
+                    <span class="small-text gray-text">Пункт выдачи</span>
+                  </div>
+                </div>
+                <button>
+                  <img class="icon trash-can-icon" src="./assets/icons/trash-can.svg" alt="remove icon">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="popup-select-button" id="delivery-method-popup-select-button">Выбрать</button>
+    </div>
+  </div>
+
+  <script src="./scripts/popup.js"></script>
   <script src="./scripts/checkFormValidation.js"></script>
   <script src="./scripts/inputSubmit.js"></script>
   <script src="./scripts/setTotalPrice.js"></script>

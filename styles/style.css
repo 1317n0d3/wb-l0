@@ -49,7 +49,7 @@ button {
   filter: invert(44%) sepia(63%) saturate(4191%) hue-rotate(348deg) brightness(98%) contrast(96%);
 }
 
-.mir-icon {
+.payment-card-icon {
   padding: 7px 1px;
   border-radius: 4px;
   background-color: #F6F6FA;

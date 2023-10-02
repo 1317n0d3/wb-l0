@@ -1,0 +1,96 @@
+.popup {
+  position: fixed;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(5, 0, 10, 0.30);;
+  top: 0;
+  left: 0;
+}
+
+.popup__content {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 452px;
+  margin-left: -226px;
+  margin-top: -260px;
+  background-color: #FFF;
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.popup__content > div {
+  width: 100%;
+}
+
+.popup__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup__header__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.popup__delivery-point-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.popup__content__subtitle {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.popup__delivery-point-buttons button {
+  width: 50%;
+  padding: 10px 19px 13px;
+  border-radius: 26px;
+  border: 2px solid rgba(203, 17, 171, 0.15);
+  font-weight: 700;
+}
+
+.popup__delivery-point-buttons .popup__delivery-point-button__active {
+  border-color:#CB11AB;
+}
+
+.popup__content__radio-buttons {
+  margin-top: 12px;
+}
+
+.popup__content__radio-button {
+  display: flex;
+  margin-top: 20px;
+}
+
+.popup__content__radio-button__block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.popup-select-button {
+  margin-top: 24px;
+  padding: 8px 32px 12px;
+  border: none;
+  background-color: #CB11AB;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+}
