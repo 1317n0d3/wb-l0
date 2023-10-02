@@ -212,4 +212,12 @@
   .tooltip-column-container {
     left: -110px;
   }
+
+  .popup__content {
+    max-width: 320px;
+  }
+
+  .popup-select-button {
+    width: 100%;
+  }
 }

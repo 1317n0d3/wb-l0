@@ -18,12 +18,11 @@
   align-items: start;
   width: 452px;
   min-height: 408px;
-  margin-left: -226px;
-  margin-top: -260px;
   background-color: #FFF;
   border-radius: 16px;
   padding: 24px;
   box-sizing: border-box;
+  transform: translate(-50%, -50%);
 }
 
 .popup__content > div {
@@ -56,7 +55,9 @@
 
 .popup__delivery-point-buttons button {
   width: 50%;
-  padding: 10px 19px 13px;
+  padding: 10px 0px 13px;
+  font-size: 13px;
+  text-wrap: nowrap;
   border-radius: 26px;
   border: 2px solid rgba(203, 17, 171, 0.15);
   font-weight: 700;
@@ -64,6 +65,16 @@
 
 .popup__delivery-point-buttons .popup__delivery-point-button__active {
   border-color:#CB11AB;
+}
+
+.popup__delivery-method__info__block__text__about {
+  display: flex;
+  margin-top: 6px;
+}
+
+.popup__delivery-method__info__block__text__about__rating {
+  margin-right: 6px;
+  margin-left: 6px;
 }
 
 .popup__content__radio-buttons {
