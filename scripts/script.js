@@ -18,6 +18,7 @@ const renderCart = (userItems) => {
   inputSubmit();
   // checkFormValidation();
   initPopup();
+  initAccordion();
 
   const buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
