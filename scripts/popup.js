@@ -44,6 +44,34 @@ const initPaymentMethodPopup = () => {
     "#payment-method-popup-button-2"
   );
   const paymentMethodPopup = document.querySelector("#payment-method-popup");
+  const paymentMethodCloseBtn = paymentMethodPopup.querySelector(
+    "#payment-method-popup-close-button"
+  );
+  const paymentMethodSelectBtn = paymentMethodPopup.querySelector(
+    "#payment-method-popup-select-button"
+  );
+
+  paymentMethodPopupBtn1.addEventListener("click", () => {
+    paymentMethodPopup.style.display = "block";
+  });
+
+  paymentMethodPopupBtn2.addEventListener("click", () => {
+    paymentMethodPopup.style.display = "block";
+  });
+
+  paymentMethodCloseBtn.addEventListener("click", () => {
+    paymentMethodPopup.style.display = "none";
+  });
+
+  paymentMethodSelectBtn.addEventListener("click", () => {
+    paymentMethodPopup.style.display = "none";
+  });
+
+  paymentMethodPopup.addEventListener("click", (e) => {
+    if (e.target.id === "payment-method-popup") {
+      paymentMethodPopup.style.display = "none";
+    }
+  });
 };
 
 const initPopup = () => {

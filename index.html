@@ -305,7 +305,7 @@
           <div class="popup__content__radio-buttons">
             <div class="popup__content__radio-button">
               <label class="radio-container">
-                <input type="radio" name="radio">
+                <input type="radio" name="radio" checked>
                 <span class="checkmark"></span>
               </label>
               <div class="popup__content__radio-button__block">
@@ -364,6 +364,70 @@
         </div>
       </div>
       <button class="popup-select-button" id="delivery-method-popup-select-button">Выбрать</button>
+    </div>
+  </div>
+
+  <div class="popup" id="payment-method-popup">
+    <div class="popup__content">
+      <div>
+        <div class="popup__header">
+          <span class="popup__header__title">Способ оплаты</span>
+          <button class="popup__header__button" id="payment-method-popup-close-button">
+            <img src="./assets/icons/search-close.svg" alt="close icon">
+          </button>
+        </div>
+        <div class="popup__content__radio-buttons">
+          <div class="popup__content__radio-button">
+            <label class="radio-container">
+              <input type="radio" name="payment-radio" checked>
+              <span class="checkmark"></span>
+            </label>
+            <div class="popup__content__radio-button__block">
+              <div class="popup__content__payment-card">
+                <img src="./assets/icons/mir.svg" alt="payment card icon" class="icon payment-card-icon">
+                <span>1234 12•• •••• 1234</span>
+              </div>
+            </div>
+          </div>
+          <div class="popup__content__radio-button">
+            <label class="radio-container">
+              <input type="radio" name="payment-radio">
+              <span class="checkmark"></span>
+            </label>
+            <div class="popup__content__radio-button__block">
+              <div class="popup__content__payment-card">
+                <img src="./assets/icons/visa.svg" alt="payment card icon" class="icon payment-card-icon">
+                <span>1234 12•• •••• 1234</span>
+              </div>
+            </div>
+          </div>
+          <div class="popup__content__radio-button">
+            <label class="radio-container">
+              <input type="radio" name="payment-radio">
+              <span class="checkmark"></span>
+            </label>
+            <div class="popup__content__radio-button__block">
+              <div class="popup__content__payment-card">
+                <img src="./assets/icons/mastercard.svg" alt="payment card icon" class="icon payment-card-icon">
+                <span>1234 12•• •••• 1234</span>
+              </div>
+            </div>
+          </div>
+          <div class="popup__content__radio-button">
+            <label class="radio-container">
+              <input type="radio" name="payment-radio">
+              <span class="checkmark"></span>
+            </label>
+            <div class="popup__content__radio-button__block">
+              <div class="popup__content__payment-card">
+                <img src="./assets/icons/maestro.svg" alt="payment card icon" class="icon payment-card-icon">
+                <span>1234 12•• •••• 1234</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="popup-select-button" id="payment-method-popup-select-button">Выбрать</button>
     </div>
   </div>
 

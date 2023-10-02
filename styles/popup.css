@@ -17,6 +17,7 @@
   justify-content: space-between;
   align-items: start;
   width: 452px;
+  min-height: 408px;
   margin-left: -226px;
   margin-top: -260px;
   background-color: #FFF;
@@ -93,4 +94,15 @@
   font-weight: 700;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.popup__content__payment-card {
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.popup__content__payment-card > span {
+  margin-left: 8px;
+  font-size: 16px;
 }
