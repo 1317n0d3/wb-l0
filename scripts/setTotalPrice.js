@@ -13,6 +13,31 @@ const setTotalPrice = (availableItems, currency, item) => {
   const selectedItems = availableItems.filter(
     (availableItem) => availableItem.selected === true
   );
+  const totalSelectedItemsCountElem = document.querySelector(
+    "#total-selected-items-count"
+  );
+  const availableItemsCollapsedHeaderElem = document.querySelector(
+    "#available-items-collapsed-header"
+  );
+
+  const totalItemsCount = availableItems.reduce(
+    (prev, current) => prev + current.count,
+    0
+  );
+
+  const totalItemsPrice = availableItems.reduce(
+    (prev, current) => prev + current.new_price * current.count,
+    0
+  );
+
+  availableItemsCollapsedHeaderElem.textContent = `${totalItemsCount} товаров · ${convertPriceFormat(
+    totalItemsPrice
+  )} сом`;
+
+  const totalSelectedItemsCount = selectedItems.reduce(
+    (prev, current) => prev + current.count,
+    0
+  );
 
   const totalPrice = selectedItems.reduce(
     (prev, current) => prev + current.new_price * current.count,
@@ -25,6 +50,8 @@ const setTotalPrice = (availableItems, currency, item) => {
   );
 
   const totalDiscount = totalPriceWithoutDiscount - totalPrice;
+
+  totalSelectedItemsCountElem.textContent = `${totalSelectedItemsCount} товара`;
 
   totalPriceElem.textContent = `${convertPriceFormat(totalPrice)} ${currency}`;
 
@@ -59,12 +86,28 @@ const setTotalPrice = (availableItems, currency, item) => {
     );
     const itemOldPriceElem = document.querySelector(`#price-old-${item.id}`);
 
+    const mobItemTotalPriceElem = document.querySelector(
+      `#mob-price-new-${item.id}`
+    );
+    const mobItemPriceCurrencyElem = document.querySelector(
+      `#mob-price-currency-${item.id}`
+    );
+    const mobItemOldPriceElem = document.querySelector(
+      `#mob-price-old-${item.id}`
+    );
+
     const itemTotalPrice = item.new_price * item.count;
     const itemOldPrice = item.old_price * item.count;
 
     itemTotalPriceElem.textContent = `${convertPriceFormat(itemTotalPrice)}`;
     itemPriceCurrencyElem.textContent = `${item.currency}`;
     itemOldPriceElem.textContent = `${convertPriceFormat(
+      itemOldPrice
+    )} ${currency}`;
+
+    mobItemTotalPriceElem.textContent = `${convertPriceFormat(itemTotalPrice)}`;
+    mobItemPriceCurrencyElem.textContent = `${item.currency}`;
+    mobItemOldPriceElem.textContent = `${convertPriceFormat(
       itemOldPrice
     )} ${currency}`;
   }

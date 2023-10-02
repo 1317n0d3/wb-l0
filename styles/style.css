@@ -62,9 +62,14 @@ button {
 }
 
 .payment-card-icon {
+  width: 32px;
+  height: 24px;
+  box-sizing: border-box;
   padding: 7px 1px;
   border-radius: 4px;
   background-color: #F6F6FA;
+  object-fit: cover;
+  overflow: visible;
 }
 
 .flex {

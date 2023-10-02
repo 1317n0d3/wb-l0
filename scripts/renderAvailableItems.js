@@ -95,16 +95,16 @@ const renderAvailableItems = (availableItems) => {
         <div class="main__cart__available-items__item__info">
           <div class="mob-main__cart__available-items__item__price block-with-tooltip">
             <div>
-              <span class="mob-main__cart__available-items__item__price__new">${
-                item.new_price
-              }</span>
-              <span class="mob-main__cart__available-items__item__price__currency">${
-                item.currency
-              }</span>
+              <span class="mob-main__cart__available-items__item__price__new" id="mob-price-new-${
+                item.id
+              }">${item.new_price}</span>
+              <span class="mob-main__cart__available-items__item__price__currency" id="mob-price-currency-${
+                item.id
+              }">${item.currency}</span>
             </div>
-            <span class="mob-main__cart__available-items__item__price__old dashed-gray small-text gray-text block-with-tooltip__trigger">${
-              item.old_price
-            } ${item.currency}</span>
+            <span class="mob-main__cart__available-items__item__price__old dashed-gray small-text gray-text block-with-tooltip__trigger" id="mob-price-old-${
+              item.id
+            }">${item.old_price} ${item.currency}</span>
             
             <div class="block-with-tooltip__container tooltip-column-container">
               <div>
