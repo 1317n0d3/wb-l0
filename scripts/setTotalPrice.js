@@ -99,6 +99,22 @@ const setTotalPrice = (availableItems, currency, item) => {
     const itemTotalPrice = item.new_price * item.count;
     const itemOldPrice = item.old_price * item.count;
 
+    if (Math.floor(itemTotalPrice).toString().length > 6) {
+      itemTotalPriceElem.classList.add(
+        "main__cart__available-items__item__price__new__small"
+      );
+      itemTotalPriceElem.classList.remove(
+        "main__cart__available-items__item__price__new"
+      );
+    } else {
+      itemTotalPriceElem.classList.remove(
+        "main__cart__available-items__item__price__new__small"
+      );
+      itemTotalPriceElem.classList.add(
+        "main__cart__available-items__item__price__new"
+      );
+    }
+
     itemTotalPriceElem.textContent = `${convertPriceFormat(itemTotalPrice)}`;
     itemPriceCurrencyElem.textContent = `${item.currency}`;
     itemOldPriceElem.textContent = `${convertPriceFormat(
