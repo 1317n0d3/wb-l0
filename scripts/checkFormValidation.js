@@ -3,6 +3,10 @@ const checkNameValidation = (nameInput, errorNameText) => {
     nameInput.classList.add("invalid");
     errorNameText.textContent = "Введите имя";
     return false;
+  } else if (!nameInput.value.match(/^([A-zА-яЁё]+)$/)) {
+    nameInput.classList.add("invalid");
+    errorNameText.textContent = "Имя содержит неверные символы";
+    return false;
   }
 
   nameInput.classList.remove("invalid");
@@ -14,6 +18,10 @@ const checkSurNameValidation = (surnameInput, errorSurnameText) => {
   if (surnameInput.value === "") {
     surnameInput.classList.add("invalid");
     errorSurnameText.textContent = "Введите фамилию";
+    return false;
+  } else if (!surnameInput.value.match(/^([A-zА-яЁё]+)$/)) {
+    surnameInput.classList.add("invalid");
+    errorSurnameText.textContent = "Фамилия содержит неверные символы";
     return false;
   }
 
