@@ -11,6 +11,11 @@
   outline: none;
 }
 
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../assets/fonts/Segoe\ UI.ttf");
+}
+
 button {
   border: none;
   background-color: transparent;
