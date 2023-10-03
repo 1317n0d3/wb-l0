@@ -5,6 +5,8 @@ const setChecked = (availableItems, checkbox, isChecked) => {
   item.selected = isChecked;
 
   setTotalPrice(availableItems, "сом");
+
+  renderDeliveryDateInfo(availableItems);
 };
 
 const isAllChecked = (checkboxes) => {

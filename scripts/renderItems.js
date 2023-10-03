@@ -5,4 +5,5 @@ const renderItems = (items) => {
   renderAvailableItems(availableItems);
   renderUnavailableItems(unavailableItems);
   initSelectAllMethod(availableItems);
+  renderDeliveryDateInfo(availableItems);
 };

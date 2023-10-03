@@ -13,7 +13,10 @@
       "count": 1,
       "warehouse": "Коледино WB",
       "provider": "OOO Вайлдберриз",
-      "delivery_date": "5—6 февраля",
+      "delivery_info": [{
+        "date": "5—6 февраля",
+        "count": 2
+      }],
       "available": true,
       "selected": true
     },
@@ -28,7 +31,14 @@
       "count": 200,
       "warehouse": "Коледино WB",
       "provider": "OOO Мегапрофстиль",
-      "delivery_date": "5—6 февраля",
+      "delivery_info": [{
+        "date": "5—6 февраля",
+        "count": 184
+      },
+      {
+        "date": "7—8 февраля",
+        "count": 200
+      }],
       "available": true,
       "selected": true
     },
@@ -43,7 +53,10 @@
       "count": 2,
       "warehouse": "Коледино WB",
       "provider": "OOO Вайлдберриз",
-      "delivery_date": "5—6 февраля",
+      "delivery_info": [{
+        "date": "5—6 февраля",
+        "count": 2
+      }],
       "available": true,
       "selected": true
     },
@@ -60,7 +73,10 @@
       "count": 1,
       "warehouse": "Коледино WB",
       "provider": "OOO Вайлдберриз",
-      "delivery_date": "5—6 февраля",
+      "delivery_info": [{
+        "date": "5—6 февраля",
+        "count": 3
+      }],
       "available": false,
       "selected": false
     },
@@ -75,7 +91,10 @@
       "count": 200,
       "warehouse": "Коледино WB",
       "provider": "OOO Мегапрофстиль",
-      "delivery_date": "5—6 февраля",
+      "delivery_info": [{
+        "date": "5—6 февраля",
+        "count": 3
+      }],
       "available": false,
       "selected": false
     },
@@ -90,7 +109,10 @@
       "count": 2,
       "warehouse": "Коледино WB",
       "provider": "OOO Вайлдберриз",
-      "delivery_date": "5—6 февраля",
+      "delivery_info": [{
+        "date": "5—6 февраля",
+        "count": 3
+      }],
       "available": false,
       "selected": false
     }

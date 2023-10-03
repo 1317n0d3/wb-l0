@@ -20,6 +20,8 @@ const initAvailableItemsListeners = (item, availableItems) => {
 
     setTotalPrice(availableItems, item.currency, item);
 
+    renderDeliveryDateInfo(availableItems);
+
     setButtonDisabled(
       minusButton,
       plusButton,
@@ -37,6 +39,8 @@ const initAvailableItemsListeners = (item, availableItems) => {
     item.count--;
 
     setTotalPrice(availableItems, item.currency, item);
+
+    renderDeliveryDateInfo(availableItems);
 
     setButtonDisabled(
       minusButton,
@@ -70,6 +74,8 @@ const initAvailableItemsListeners = (item, availableItems) => {
       cartButtonCounter.style.display = "none";
       mobCartButtonCounter.style.display = "none";
     }
+
+    renderDeliveryDateInfo(availableItems);
 
     event.preventDefault();
   });

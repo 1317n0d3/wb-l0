@@ -16,7 +16,6 @@ fetchJSON().then((data) => {
 const renderCart = (userItems) => {
   renderItems(userItems);
   inputSubmit();
-  // checkFormValidation();
   initPopup();
   initAccordion();
 
