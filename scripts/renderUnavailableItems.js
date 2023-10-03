@@ -27,6 +27,12 @@ const renderUnavailableItems = (unavailableItems) => {
             <img src="${
               item.image_url
             }" alt="item photo" class="main__cart__unavailable-items__item__photo">
+
+            ${
+              item.size
+                ? `<span class="mob-main__cart__item__info__params__size">${item.size}</span>`
+                : ``
+            }
           
           <div class="main__cart__unavailable-items__item__info">
             <span class="main__cart__unavailable-items__item__info__title gray-text">${cutItemTitle(

@@ -91,6 +91,12 @@ const renderAvailableItems = (availableItems) => {
           <img src="${
             item.image_url
           }" alt="item photo" class="main__cart__available-items__item__photo">
+
+            ${
+              item.size
+                ? `<span class="mob-main__cart__item__info__params__size">${item.size}</span>`
+                : ``
+            }
         </div>
         
         <div class="main__cart__available-items__item__info">

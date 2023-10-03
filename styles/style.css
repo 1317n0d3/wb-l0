@@ -724,6 +724,10 @@ input[type="submit"]:disabled {
   display: none;
 }
 
+.mob-main__cart__item__info__params__size {
+  display: none;
+}
+
 @media (max-width: 1399px) {
   .main__total {
     width: 40%;

@@ -88,8 +88,24 @@
     border-radius: 6px;
   }
 
-  .main__cart__available-items__item__info__params__size {
+  .main__cart__available-items__item__info__params__size,
+  .main__cart__unavailable-items__item__info__params__size {
     display: none;
+  }
+
+  .main__cart__unavailable-items__item {
+    position: relative;
+  }
+
+  .mob-main__cart__item__info__params__size {
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 4px;
+    font-size: 14px;
+    background-color: #FFF;
+    border-radius: 6px;
+    padding: 0px 4px 3px;
   }
 
   .main__cart__available-items__item__controls {
