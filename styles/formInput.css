@@ -1,0 +1,31 @@
+.custom-text-input {
+  position: relative;
+}
+
+.custom-text-input__label {
+  color: #9797AF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  position: absolute;
+  pointer-events: none;
+  top: 0px;
+  left: 0px;
+  transition: all 0.1s ease;
+}
+
+.custom-text-input__input:focus ~ .custom-text-input__label,
+.custom-text-input__input:not(:focus):valid ~ .custom-text-input__label {
+  top: -22px;
+  bottom: 0px;
+  left: 0px;
+  font-size: 13px;
+  opacity: 1;
+  color: #9797AF;
+}
+
+.main__cart__recipient .invalid + .custom-text-input__label,
+.main__cart__recipient .invalid.custom-text-input__input:focus ~ .custom-text-input__label,
+.main__cart__recipient .invalid.custom-text-input__input:not(:focus):valid ~ .custom-text-input__label{
+  color: #C20013;
+}

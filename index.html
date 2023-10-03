@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./styles/tooltip.css">
   <link rel="stylesheet" href="./styles/popup.css">
   <link rel="stylesheet" href="./styles/radioButton.css">
+  <link rel="stylesheet" href="./styles/formInput.css">
 </head>
 <body>
   <header class="header">
@@ -45,7 +46,7 @@
 
   
 
-  <form class="main" onsubmit="return checkFormValidation()">
+  <form class="main" onsubmit="return checkFormValidation()" novalidate>
     <section class="main__cart">
       <h1 class="main__cart__title">Корзина</h1>
 
@@ -159,26 +160,31 @@
       <div class="main__cart__recipient white-container">
         <h2>Получатель</h2>
         <div class="main__cart__recipient__row-1">
-          <div>
-            <input type="text" name="" id="form-name" placeholder="Имя">
+          <div class="custom-text-input">
+            <input type="text" class="custom-text-input__input" name="" id="form-name" required>
+            <label class="custom-text-input__label">Имя</label>
             <span class="input-error-text" id="error-name-text"></span>
           </div>
-          <div>
-            <input type="text" name="" id="form-surname" placeholder="Фамилия">
+          <div class="custom-text-input">
+            <input type="text" class="custom-text-input__input" name="" id="form-surname" required>
+            <label class="custom-text-input__label">Фамилия</label>
             <span class="input-error-text" id="error-surname-text"></span>
           </div>
         </div>
         <div class="main__cart__recipient__row-2">
-          <div>
-            <input type="text" name="" id="form-email" placeholder="Почта">
+          <div class="custom-text-input">
+            <input type="text" class="custom-text-input__input" name="" id="form-email" required>
+            <label class="custom-text-input__label">Почта</label>
             <span class="input-error-text" id="error-email-text"></span>
           </div>
-          <div>
-            <input type="text" name="" id="form-phone" placeholder="Телефон">
+          <div class="custom-text-input">
+            <input type="text" class="custom-text-input__input" name="" id="form-phone" required>
+            <label class="custom-text-input__label">Телефон</label>
             <span class="input-error-text" id="error-phone-text"></span>
           </div>
-          <div class="main__cart__recipient__row-2__inn">
-            <input type="text" name="" id="form-inn" placeholder="ИНН">
+          <div class="main__cart__recipient__row-2__inn custom-text-input">
+            <input type="text" class="custom-text-input__input" name="" id="form-inn" required>
+            <label class="custom-text-input__label">ИНН</label>
             <span class="input-error-text" id="error-inn-text"></span>
             <span class="main__cart__recipient__row-2__inn__text">Для таможенного оформления</span>
           </div>
