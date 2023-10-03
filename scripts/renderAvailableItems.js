@@ -5,6 +5,10 @@ const initAvailableItemsListeners = (item, availableItems) => {
   const plusButton = document.querySelector(`#plus-button-${item.id}`);
   const favoriteButton = document.querySelector(`#favorite-${item.id}`);
   const trashCanButton = document.querySelector(`#trash-can-${item.id}`);
+  const cartButtonCounter = document.querySelector("#cart-button-counter");
+  const mobCartButtonCounter = document.querySelector(
+    "#mob-cart-button-counter"
+  );
 
   setButtonDisabled(minusButton, plusButton, input.value, input.min, input.max);
 
@@ -53,6 +57,19 @@ const initAvailableItemsListeners = (item, availableItems) => {
     item.selected = false;
     item.count = 0;
     setTotalPrice(availableItems, "сом");
+
+    const count = availableItems.filter(
+      (availableItem) => availableItem.count > 0
+    ).length;
+    if (count) {
+      cartButtonCounter.style.display = "block";
+      mobCartButtonCounter.style.display = "block";
+      cartButtonCounter.textContent = count;
+      mobCartButtonCounter.textContent = count;
+    } else {
+      cartButtonCounter.style.display = "none";
+      mobCartButtonCounter.style.display = "none";
+    }
 
     event.preventDefault();
   });
