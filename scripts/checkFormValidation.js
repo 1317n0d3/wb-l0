@@ -139,7 +139,9 @@ const checkFormValidation = () => {
 
   const inputSubmitOrder = document.querySelector("#input-submit-order");
 
-  checkAllFields();
+  if (!checkAllFields() && window.matchMedia("(max-width: 1024px)").matches) {
+    name.scrollIntoView();
+  }
 
   if (!inputSubmitOrder.disabled) {
     name.addEventListener("input", () => {

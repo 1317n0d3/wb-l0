@@ -51,6 +51,7 @@ const initAvailableItemsListeners = (item, availableItems) => {
   trashCanButton.addEventListener("click", (event) => {
     itemCard.remove();
     item.selected = false;
+    item.count = 0;
     setTotalPrice(availableItems, "сом");
 
     event.preventDefault();
@@ -118,9 +119,10 @@ const renderAvailableItems = (availableItems) => {
             </div>
           </div>
 
-          <span class="main__cart__available-items__item__info__title">${
-            item.title
-          }</span>
+          <span class="main__cart__available-items__item__info__title">${cutItemTitle(
+            item.title,
+            44
+          )}</span>
         
           <div class="main__cart__available-items__item__info__params">
             ${
