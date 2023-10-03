@@ -1,9 +1,16 @@
 const initUnavailableItemsListeners = (item, unavailableItems) => {
   const trashCanButton = document.querySelector(`#trash-can-${item.id}`);
   const itemCard = document.querySelector(`#item-card-${item.id}`);
+  const unavailableItemsCount = document.querySelector("#missing-items-count");
 
   trashCanButton.addEventListener("click", (event) => {
     itemCard.remove();
+    item.count = 0;
+    const count = unavailableItems.filter(
+      (unavailableItem) => unavailableItem.count > 0
+    ).length;
+
+    unavailableItemsCount.textContent = `Отсутствуют · ${count} товара`;
 
     event.preventDefault();
   });
