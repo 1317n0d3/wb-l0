@@ -3,6 +3,10 @@
     font-size: 20px;
   }
 
+  h2 {
+    font-size: 20px;
+  }
+
   .header {
     padding: 14px;
   }
@@ -170,6 +174,12 @@
   .main__cart__recipient__row-1,
   .main__cart__recipient__row-2 {
     flex-direction: column;
+    margin-top: 20px;
+    gap: 45px;
+  }
+
+  .main__cart__recipient__row-1 {
+    margin-bottom: 45px;
   }
 
   .main__cart__recipient {
@@ -219,5 +229,14 @@
 
   .popup-select-button {
     width: 100%;
+  }
+
+  .main__total__table th {
+    font-size: 20px;
+  }
+
+  .main__total__free-shipping,
+  .main__total__payment-immediately {
+    background-color: #F0ECF4;
   }
 }
